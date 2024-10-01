@@ -4,5 +4,4 @@ variable "vpc-id" {
 
 variable "name" {
   type = string
-  default = "my-igw"
 }

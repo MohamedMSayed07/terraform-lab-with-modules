@@ -48,12 +48,12 @@ variable "to-port2" {
 variable "enable_ingress_rule_1" {
   type        = bool
   description = "Whether to enable the first ingress rule"
-  default     = true  # Default is true (enabled)
+  default     = false  # Default is false (disabled)
 }
 
 # Variable to enable or disable ingress rule 2
 variable "enable_ingress_rule_2" {
   type        = bool
   description = "Whether to enable the second ingress rule"
-  default     = true  # Default is true (enabled)
+  default     = false  # Default is false (disabled)
 }

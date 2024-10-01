@@ -1,15 +1,18 @@
 module "vpc" {
   source = "./modules/vpc"
   cidr-block = var.vpc-cidr-block
+  name = "my-vpc"
 }
 
 module "igw" {
   source = "./modules/igw"
   vpc-id = module.vpc.id
+  name = "my-igw"
 }
 
 module "public-subnet" {
   source = "./modules/subnet"
+  name = "public-subnet"
   vpc-id = module.vpc.id
   cidr-block = var.public-subnet-cidr
   availability-zone = var.public-subnet-az
@@ -18,6 +21,7 @@ module "public-subnet" {
 
 module "private-subnet" {
   source = "./modules/subnet"
+  name = "private-subnet"
   vpc-id = module.vpc.id
   cidr-block = var.private-subnet-cidr
   availability-zone = var.private-subnet-az
